@@ -1,0 +1,405 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none !important;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Logo principal */
+.logo-container {
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.main-logo {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* Contenedor de botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+/* Estilos de botones */
+.btn {
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 220px;
+}
+
+.btn-primary {
+    background-color: #003087;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #002366;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 48, 135, 0.2);
+}
+
+.btn-secondary {
+    background-color: #009cde;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #007bb5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 156, 222, 0.2);
+}
+
+/* Sección de métodos de pago */
+.payment-methods {
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.payment-methods h2 {
+    color: #003087;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.payment-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.payment-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    color: #003087;
+}
+
+.payment-logo span {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Imagen de Monopoly Cash */
+.monopoly-cash {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.payment-logo:last-child:hover .monopoly-cash {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Disclaimer */
+.disclaimer {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-align: center; /* Cambiado de 'left' a 'center' */
+}
+
+.disclaimer p {
+    color: #856404;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añade esto para centrar el contenido */
+    gap: 10px;
+}
+
+.disclaimer.small {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Enlace externo */
+.external-link {
+    margin-top: 30px;
+}
+
+.external-link a {
+    color: #009cde;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.external-link a:hover {
+    color: #003087;
+    text-decoration: underline;
+}
+
+/* Estilos de modales */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.modal-header h2 {
+    color: #003087;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #003087;
+}
+
+/* Pasos del modal */
+.modal-step {
+    padding: 10px 0;
+}
+
+.step-description {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.random-amount {
+    font-weight: 700;
+    color: #003087;
+    background-color: #f0f7ff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Grupos de entrada */
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #003087;
+    outline: none;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #dc3545;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* Barra de carga */
+.loading-container {
+    margin: 40px 0;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #003087, #009cde);
+    border-radius: 10px;
+    animation: loading 5s ease-in-out forwards;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Icono de éxito */
+.success-icon {
+    font-size: 4rem;
+    color: #28a745;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+    
+    .main-logo {
+        width: 180px;
+    }
+    
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 16px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .payment-logos {
+        gap: 20px;
+    }
+    
+    .payment-logo {
+        font-size: 1.5rem;
+    }
+    
+    .monopoly-cash {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-logo {
+        width: 150px;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .payment-methods {
+        padding: 20px 15px;
+    }
+    
+    .payment-logos {
+        gap: 15px;
+    }
+    
+    .payment-logo {
+        font-size: 1.3rem;
+    }
+    
+    .payment-logo span {
+        font-size: 0.8rem;
+    }
+    
+    .monopoly-cash {
+        width: 45px;
+        height: 45px;
+    }
+}
